@@ -228,10 +228,10 @@ section .imageContainer {
 }
 .footer {
   width: auto;
-  color: #ced4da;
+  color: #adb5bd;
   margin-top: 2rem;
   font-size: 14px;
   text-align: center;
-  border-top: 1px solid #ced4da;
+  border-top: 1px solid #adb5bd;
   padding: 1rem;
 }
