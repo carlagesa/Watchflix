@@ -70,6 +70,7 @@ function createVideoTemplate(data) {
 
 function createSectionHeader(title) {
   const header = document.createElement("h2");
+  header.classList.add("header-titles");
   header.innerHTML = title;
 
   return header;

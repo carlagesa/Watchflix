@@ -1,5 +1,11 @@
 /*The following code takes care of the UI*/
 
+/* Global Reset */
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background: #000000;
@@ -96,6 +102,13 @@ a:active {
       border:2px solid #EC4067;
       cursor: pointer;
   }*/
+
+.genres {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 .buttons {
   background-color: #ec4067;
   color: white;
@@ -104,8 +117,6 @@ a:active {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 25px;
-  margin-left: 50px;
   transition: all 0.3s ease;
 }
 
@@ -138,6 +149,10 @@ a:active {
 
 #movies-container {
   padding: 1rem;
+}
+
+.header-titles {
+  font-size: 28px;
 }
 
 .container {
