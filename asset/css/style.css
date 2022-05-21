@@ -136,6 +136,10 @@ a:active {
 
 /*Ends here!*/
 
+#movies-container {
+  padding: 1rem;
+}
+
 .container {
   padding: 20px;
   margin: 0 auto;
@@ -222,7 +226,10 @@ section .imageContainer {
 }
 .footer {
   width: auto;
-  height: 350px;
-  font-family: "Press Start 2P", cursive;
-  background-color: #ec4067;
+  color: #ced4da;
+  margin-top: 2rem;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #ced4da;
+  padding: 1rem;
 }
