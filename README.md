@@ -23,8 +23,8 @@ https://carlagesa.github.io/Watchflix/
 
 ## Contributing
 
-Contributions to this project are always welcome!
-I'm never good at UI maybe you can help.
+To make contributions to this repository please see 
+- [Contributing.md](https://github.com/carlagesa/Watchflix/blob/main/CONTRIBUTING.md)
 
 ## Feedback
 
