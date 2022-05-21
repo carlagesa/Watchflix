@@ -14,7 +14,6 @@ body {
 .topnav {
   background-color: white;
   overflow: hidden;
-  padding-top: 20px;
 }
 
 /* Style the links inside the navigation bar */
@@ -24,6 +23,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  transition: all 0.3s ease;
   font-size: 17px;
 }
 
@@ -45,6 +45,7 @@ a:active {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .topbutton:hover {
@@ -76,6 +77,7 @@ a:active {
   text-align: center;
   height: 34px;
   margin-top: 12px;
+  transition: all 0.3s ease;
   border-radius: 7px;
 }
 
@@ -85,15 +87,15 @@ a:active {
 }
 
 /*.buttons{
-    width: 90px;
-    height: 30px;
-    margin-top: 25px;
-    margin-left: 50px;
-    border-radius: 11px;
-    background-color: white;
-    border:2px solid #EC4067;
-    cursor: pointer;
-}*/
+      width: 90px;
+      height: 30px;
+      margin-top: 25px;
+      margin-left: 50px;
+      border-radius: 11px;
+      background-color: white;
+      border:2px solid #EC4067;
+      cursor: pointer;
+  }*/
 .buttons {
   background-color: #ec4067;
   color: white;
@@ -104,6 +106,7 @@ a:active {
   cursor: pointer;
   margin-top: 25px;
   margin-left: 50px;
+  transition: all 0.3s ease;
 }
 
 .buttons:hover {
@@ -113,11 +116,11 @@ a:active {
   cursor: pointer;
 }
 /*.buttons:hover{
-    color: white;
-    background-color: #EC4067;
-    border:1px solid white;
-    box-shadow: 0 9px 9px 0 rgba(253, 245, 245, 0.411), 0 17px 50px 0 rgba(255, 247, 247, 0.411);
-}*/
+      color: white;
+      background-color: #EC4067;
+      border:1px solid white;
+      box-shadow: 0 9px 9px 0 rgba(253, 245, 245, 0.411), 0 17px 50px 0 rgba(255, 247, 247, 0.411);
+  }*/
 
 #content {
   display: none;
@@ -162,7 +165,6 @@ section .imageContainer {
   border-radius: 20px;
   position: relative;
   min-height: 130px;
-  width: 98%;
   border: 1px solid rgb(235, 8, 113);
   padding-left: 20px;
 }
@@ -174,8 +176,7 @@ section .imageContainer {
 .content-display {
   /*display: block;*/
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
