@@ -1,234 +1,252 @@
 /*The following code takes care of the UI*/
 
+/* Global Reset */
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: #000000;
-    color: #e6e6e6;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  background: #000000;
+  color: #e6e6e6;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: white;
-    overflow: hidden;
-    padding-top: 20px;
+  overflow: hidden;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    float: right;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 17px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: white;
-    color: #EC4067;
+  color: #ec4067;
 }
 
 a:active {
-    color: #EC4067;
+  color: #ec4067;
 }
 
 .topbutton {
-    background-color: #EC4067;
-    color: white;
-    width: 110px;
-    height: 32px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
+  background-color: #ec4067;
+  color: white;
+  width: 110px;
+  height: 32px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .topbutton:hover {
-    background-color: white;
-    color: #EC4067;
-    border: 1px solid #EC4067;
-    cursor: pointer;
+  background-color: white;
+  color: #ec4067;
+  border: 1px solid #ec4067;
+  cursor: pointer;
 }
 
 /*This is the text logo at the top of the left corner*/
 .spanlogo {
-    font-family: 'Nunito', sans-serif;
-    padding-left: 30px;
-    font-weight: bold;
-    color: #EC4067;
-    font-size: xx-large;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  color: #ec4067;
+  font-size: xx-large;
 }
 
-.spanlogoblack {
-    color: black;
-    font-family: 'Nunito', sans-serif;
-    padding-left: 10px;
-    font-weight: bold;
-    font-size: xx-large;
+.search-btn {
+  margin-left: auto;
 }
 
 .input {
-    float: right;
-    text-align: center;
-    height: 34px;
-    margin-top: 12px;
-    border-radius: 7px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #ced4da;
+  padding: 8px;
+  border-radius: 7px;
 }
 
 .input:hover {
-    color: #EC4067;
-    cursor: pointer;
+  color: #ec4067;
+  cursor: pointer;
 }
 
 /*.buttons{
-    width: 90px;
-    height: 30px;
-    margin-top: 25px;
-    margin-left: 50px;
-    border-radius: 11px;
-    background-color: white;
-    border:2px solid #EC4067;
-    cursor: pointer;
-}*/
-.buttons{
-    background-color: #EC4067;
-    color: white;
-    width: 110px;
-    height: 32px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 25px;
-    margin-left: 50px;
+      width: 90px;
+      height: 30px;
+      margin-top: 25px;
+      margin-left: 50px;
+      border-radius: 11px;
+      background-color: white;
+      border:2px solid #EC4067;
+      cursor: pointer;
+  }*/
+
+.genres {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.buttons {
+  background-color: #ec4067;
+  color: white;
+  width: 110px;
+  height: 32px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .buttons:hover {
-    background-color: white;
-    color: #EC4067;
-    border: 1px solid #EC4067;
-    cursor: pointer;
+  background-color: white;
+  color: #ec4067;
+  border: 1px solid #ec4067;
+  cursor: pointer;
 }
 /*.buttons:hover{
-    color: white;
-    background-color: #EC4067;
-    border:1px solid white;
-    box-shadow: 0 9px 9px 0 rgba(253, 245, 245, 0.411), 0 17px 50px 0 rgba(255, 247, 247, 0.411);
-}*/
+      color: white;
+      background-color: #EC4067;
+      border:1px solid white;
+      box-shadow: 0 9px 9px 0 rgba(253, 245, 245, 0.411), 0 17px 50px 0 rgba(255, 247, 247, 0.411);
+  }*/
 
 #content {
-    display: none
+  display: none;
 }
 
-
-
-@media only screen and (min-device-width:1200px) {
-    #header {
-        top: 0;
-        bottom: auto;
-        height: 75px
-    }
+@media only screen and (min-device-width: 1200px) {
+  #header {
+    top: 0;
+    bottom: auto;
+    height: 75px;
+  }
 }
 
 /*Ends here!*/
 
-.container {
-    padding: 20px;
-    margin: 0 auto;
+#movies-container {
+  padding: 1rem;
+}
 
+.header-titles {
+  font-size: 28px;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
 }
 
 .movie {
-    margin-top: 50px;
+  overflow-x: scroll;
+  margin-bottom: 2rem;
 }
 
 section {
-    position: relative;
-    width: 100%;
-    margin-top: 25px;
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    overflow: auto;
-    transition: 250ms all;
+  position: relative;
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  transition: 250ms all;
 }
 
 section .imageContainer {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .content {
-    display: none;
-    border-radius: 20px;
-    position: relative;
-    min-height: 130px;
-    width: 98%;
-    border: 1px solid rgb(235, 8, 113);
-    padding-left: 20px;
+  display: none;
+  border-radius: 20px;
+  position: relative;
+  min-height: 130px;
+  border: 1px solid rgb(235, 8, 113);
+  padding-left: 20px;
 }
 
 .content-display {
-    display: block;
+  display: block;
 }
 
 .content-display {
-    /*display: block;*/
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
+  /*display: block;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content div {
-    margin: 5px;
+  margin: 5px;
 }
 
 #content-close {
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    padding: 05px;
-    width: 13px;
-    border: 2px solid rgb(245, 10, 174);
-    border-radius: 20%;
-    left: 35px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  padding: 05px;
+  width: 13px;
+  border: 2px solid rgb(245, 10, 174);
+  border-radius: 20%;
+  left: 35px;
 }
 
 #content-close:hover {
-    color: #EC4067;
-    border: 3px solid rgb(245, 10, 174);
-
+  color: #ec4067;
+  border: 3px solid rgb(245, 10, 174);
 }
 
 .imageContainer {
-    transition: 250ms all;
-    width: 190px;
+  transition: 250ms all;
+  width: 190px;
 }
 
 .imageContainer:hover {
-    margin-left: 0px 40px;
-    transform: scale(1.2);
-    cursor: pointer;
-
+  margin-left: 0px 40px;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .imageContainer img {
-    padding: 10%;
-    width: 97%;
+  padding: 10%;
+  width: 97%;
+}
+.tmdb {
+  width: 100px;
+  padding-top: 5px;
+  padding-left: 100px;
+}
+.footer {
+  width: auto;
+  color: #adb5bd;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #adb5bd;
+  margin-top: 2rem;
+  padding: 1rem;
+}
 
-}
-.tmdb{
-    width: 100px;
-    padding-top: 5px;
-    padding-left:100px;
-}
-.footer{
-    width: auto;
-    height: 350px;
-    font-family: 'Press Start 2P', cursive;   
-     background-color: #EC4067;
+.footer a {
+  text-decoration: none;
+  color: #ec4067;
 }

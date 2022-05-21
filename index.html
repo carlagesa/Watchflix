@@ -1,54 +1,59 @@
 <html lang="en_US">
-
-<head>
-
-
+  <head>
     <title>Movie trailers| WATCHING HOUR</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="./asset/css/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!--Start of Navigation bar-->
     <header class="links">
-        <div class="topnav">
-            <a href="index.html"> <span class="spanlogo">WATCH</span> <span class="spanlogoblack">FLIX</span>
-            </a>
-            <a href=""><button class="topbutton"> <img src="images/headbang.gif" alt=""> Search</button></a>
-            <input class="input" type="text" placeholder="I'll be functional soon!">
+      <div class="topnav">
+        <a href="index.html">
+          <span class="spanlogo">WATCHFLIX</span>
+        </a>
 
-            <a href="tvshows.html">Tv Shows</a>
-            <a href="index.html" class="active">Movies</a>
-        </div>
+        <a href="tvshows.html">Tv Shows</a>
+        <a href="index.html" class="active">Movies</a>
+
+        <a class="search-btn" href=""
+          ><button class="topbutton">
+            <img src="images/headbang.gif" alt="" /> Search
+          </button></a
+        >
+        <input
+          class="input"
+          type="text"
+          placeholder="I'll be functional soon!"
+        />
+      </div>
     </header>
     <!--End of Navigation bar-->
 
-    <div>
-        <button class="buttons">Action</button>
-        <button class="buttons">Adventure</button>
-        <button class="buttons">Horror</button>
-        <button class="buttons">Anime</button>
-        <button class="buttons">Fantasy</button>
-        <button class="buttons">Kids</button>
+    <div class="genres">
+      <button class="buttons">Action</button>
+      <button class="buttons">Adventure</button>
+      <button class="buttons">Horror</button>
+      <button class="buttons">Anime</button>
+      <button class="buttons">Fantasy</button>
+      <button class="buttons">Kids</button>
     </div>
 
     <div id="search" title="Browse our trailers and movie database">
-        <!-- <div id="tv-searchable"></div>-->
-
+      <!-- <div id="tv-searchable"></div>-->
     </div>
     <div id="movies-container">
-        <div class="providers">
-
-        </div>
+      <div class="providers"></div>
     </div>
 
     <script src="./asset/js/apiTransaction.js"></script>
     <script src="./asset/js/app.js"></script>
 
     <footer class="footer">
-        This website uses data provided by TMDB <br>  <img src="asset/images/tmdb.svg" alt="" class="tmdb">
-       
+      This website uses data provided by
+      <a target="_blank" href="https://developers.themoviedb.org/3">
+        TMDB API</a
+      >
     </footer>
-</body>
-
+  </body>
 </html>
