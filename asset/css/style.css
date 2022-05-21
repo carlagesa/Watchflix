@@ -4,6 +4,8 @@
 * {
   padding: 0;
   margin: 0;
+  border: none;
+  background: none;
 }
 
 body {
@@ -18,16 +20,17 @@ body {
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: white;
   overflow: hidden;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: right;
-  color: black;
+  color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   transition: all 0.3s ease;
   font-size: 17px;
@@ -35,7 +38,6 @@ body {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: white;
   color: #ec4067;
 }
 
@@ -64,26 +66,20 @@ a:active {
 /*This is the text logo at the top of the left corner*/
 .spanlogo {
   font-family: "Nunito", sans-serif;
-  padding-left: 30px;
   font-weight: bold;
   color: #ec4067;
   font-size: xx-large;
 }
 
-.spanlogoblack {
-  color: black;
-  font-family: "Nunito", sans-serif;
-  padding-left: 10px;
-  font-weight: bold;
-  font-size: xx-large;
+.search-btn {
+  margin-left: auto;
 }
 
 .input {
-  float: right;
   text-align: center;
-  height: 34px;
-  margin-top: 12px;
   transition: all 0.3s ease;
+  background-color: #ced4da;
+  padding: 8px;
   border-radius: 7px;
 }
 
