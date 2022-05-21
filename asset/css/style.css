@@ -146,8 +146,7 @@ a:active {
 }
 
 .movie {
-  margin-top: 50px;
-
+  margin-bottom: 50px;
   overflow-x: scroll;
 }
 
@@ -229,7 +228,6 @@ section .imageContainer {
 .footer {
   width: auto;
   color: #adb5bd;
-  margin-top: 2rem;
   font-size: 14px;
   text-align: center;
   border-top: 1px solid #adb5bd;
