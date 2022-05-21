@@ -145,9 +145,6 @@ a:active {
 
 #movies-container {
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 
 .header-titles {
@@ -161,6 +158,7 @@ a:active {
 
 .movie {
   overflow-x: scroll;
+  margin-bottom: 2rem;
 }
 
 section {
@@ -246,4 +244,9 @@ section .imageContainer {
   border-top: 1px solid #adb5bd;
   margin-top: 2rem;
   padding: 1rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ec4067;
 }
