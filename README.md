@@ -19,11 +19,12 @@ Buttons Color | ![#EC4067]
 ## Demo
 
 To check out the website live:
-https://carlagesa.github.io/Watchflix/
+<https://carlagesa.github.io/Watchflix/>
 
 ## Contributing
 
-To make contributions to this repository please see 
+To make contributions to this repository please see
+
 - [Contributing.md](https://github.com/carlagesa/Watchflix/blob/main/CONTRIBUTING.md)
 
 ## Feedback
@@ -62,7 +63,7 @@ Got to know JS well than before.
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carlton-agesa/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/techguy_ke)
 
-## Get to know me more.
+## Get to know me more
 
 👩‍💻 I'm currently working on gaining gaining market driven skills.
 
