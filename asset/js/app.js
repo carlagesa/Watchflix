@@ -43,6 +43,7 @@ function createIframe(video) {
 
 function insertIframeIntoContent(video, content) {
   const videoContent = document.createElement("div");
+  videoContent.classList.add('movie-video')
   const iframe = createIframe(video);
 
   videoContent.appendChild(iframe);
@@ -53,7 +54,15 @@ function createVideoTemplate(data) {
   const content = this.content;
   content.innerHTML = '<p id="content-close">X</p>';
 
+  // Wrapper for the video trailers
+  const trailersContainer = document.createElement('div')
+  trailersContainer.classList.add('trailers-container')
+
+  content.appendChild(trailersContainer)
+
   const videos = data.results || [];
+
+  console.log(this.content)
 
   if (videos.length === 0) {
     content.innerHTML = `
@@ -65,7 +74,7 @@ function createVideoTemplate(data) {
 
   for (let i = 0; i < 4; i++) {
     const video = videos[i];
-    insertIframeIntoContent(video, content);
+    insertIframeIntoContent(video, trailersContainer);
   }
 }
 
@@ -126,7 +135,6 @@ function createMovieContainer(section) {
             <p id="content-close">X</p>
         </div>
         `;
-
 
   movieElement.innerHTML = template;
   movieElement.insertBefore(section, movieElement.firstChild);
