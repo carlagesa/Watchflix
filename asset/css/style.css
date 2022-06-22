@@ -222,6 +222,12 @@ section .imageContainer {
   background-color:  rgb(245, 10, 174);
 }
 
+.trailers-container{
+  display:flex;
+  flex-wrap: wrap;
+  gap:1rem;
+}
+
 .imageContainer {
   transition: 250ms all;
   width: 190px;
