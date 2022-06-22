@@ -215,6 +215,7 @@ section .imageContainer {
   padding:0.3rem 0.6rem;
   border: 1px solid rgb(245, 10, 174);
   border-radius: 5px;
+  width: fit-content;
   transition: all 0.3s ease;
 }
 
