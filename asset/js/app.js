@@ -157,9 +157,21 @@ document.onclick = function (event) {
   log("Event: ", event);
   const { tagName, id } = event.target;
   if (tagName.toLowerCase() === "img") {
+
     const movieId = event.target.dataset.movieId;
     const section = event.target.parentElement.parentElement;
     const content = section.nextElementSibling;
+
+    // Selects every content in the DOM.
+    const contents = document.querySelectorAll('.content')
+
+    // Loops through all content containers and hide it 
+    // so only one content would show every time user clicks a movie card.
+    contents.forEach((element) => {
+      if(element === content) return;
+      element.innerHTML = "";
+      element.classList.remove('content-display')
+    })
 
     content.classList.add("content-display");
     getVideosByMovieId(movieId, content);
