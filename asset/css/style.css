@@ -181,13 +181,13 @@ section .imageContainer {
 .content {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  overflow: scroll;
   gap:1rem;
-  padding:1rem;
   position: fixed;
   top:0;
-  width: 100vw;
-  height:100vh;
+  left:0;
+  padding:1rem 2rem;
+  height:100%;
   background-color: #111;
   transition: all 0.3s ease;
   opacity: 0;
@@ -203,11 +203,9 @@ section .imageContainer {
 
 .content-display iframe{
   border-radius: 5px;
-}
-
-
-.content div {
-  margin: 5px;
+  /* Makes the youtube videos responsive */
+  aspect-ratio: 16 / 9;
+  width: 100%;
 }
 
 #content-close {
@@ -224,8 +222,8 @@ section .imageContainer {
 }
 
 .trailers-container{
-  display:flex;
-  flex-wrap: wrap;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap:1rem;
 }
 
