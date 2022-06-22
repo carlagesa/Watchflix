@@ -122,10 +122,11 @@ function createMovieContainer(section) {
   movieElement.setAttribute("class", "movie");
 
   const template = `
-        <div class="content">
+<div class="content">
             <p id="content-close">X</p>
         </div>
-    `;
+        `;
+
 
   movieElement.innerHTML = template;
   movieElement.insertBefore(section, movieElement.firstChild);
@@ -151,6 +152,7 @@ document.onclick = function (event) {
     const movieId = event.target.dataset.movieId;
     const section = event.target.parentElement.parentElement;
     const content = section.nextElementSibling;
+
     content.classList.add("content-display");
     getVideosByMovieId(movieId, content);
   }
