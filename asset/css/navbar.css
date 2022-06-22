@@ -1,0 +1,69 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #ec4067;
+}
+
+a:active {
+  color: #ec4067;
+}
+
+.topbutton {
+  background-color: #ec4067;
+  color: white;
+  width: 110px;
+  height: 32px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.topbutton:hover {
+  background-color: white;
+  color: #ec4067;
+  border: 1px solid #ec4067;
+  cursor: pointer;
+}
+
+/*This is the text logo at the top of the left corner*/
+.spanlogo {
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  color: #ec4067;
+  font-size: xx-large;
+}
+
+.search-btn {
+  margin-left: auto;
+}
+
+.input {
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #ced4da;
+  padding: 8px;
+  border-radius: 7px;
+}
+
+.input:hover {
+  color: #ec4067;
+  cursor: pointer;
+}

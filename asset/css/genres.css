@@ -1,0 +1,23 @@
+.genres {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.buttons {
+  background-color: #ec4067;
+  color: white;
+  width: 110px;
+  height: 32px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttons:hover {
+  background-color: white;
+  color: #ec4067;
+  border: 1px solid #ec4067;
+  cursor: pointer;
+}

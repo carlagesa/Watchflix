@@ -1,0 +1,49 @@
+
+.content {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  gap:1rem;
+  position: fixed;
+  top:0;
+  left:0;
+  padding:1rem 2rem;
+  height:100%;
+  background-color: #111;
+  transition: all 0.4s ease;
+  transform: translateX(-100%);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.content-display {
+  transform: unset;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.content-display iframe{
+  border-radius: 5px;
+  /* Makes the youtube videos responsive */
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+#content-close {
+  cursor: pointer;
+  padding:0.3rem 0.6rem;
+  border: 1px solid rgb(245, 10, 174);
+  border-radius: 5px;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+#content-close:hover {
+  background-color:  rgb(245, 10, 174);
+}
+
+.trailers-container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap:1rem;
+}

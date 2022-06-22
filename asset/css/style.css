@@ -1,3 +1,8 @@
+@import url('./navbar.css');
+@import url('./genres.css');
+@import url('./content.css');
+@import url('./footer.css');
+
 /*The following code takes care of the UI*/
 
 /* Global Reset */
@@ -18,116 +23,6 @@ body {
   line-height: 1.5;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-  overflow: hidden;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  padding: 1rem;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  color: #ec4067;
-}
-
-a:active {
-  color: #ec4067;
-}
-
-.topbutton {
-  background-color: #ec4067;
-  color: white;
-  width: 110px;
-  height: 32px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.topbutton:hover {
-  background-color: white;
-  color: #ec4067;
-  border: 1px solid #ec4067;
-  cursor: pointer;
-}
-
-/*This is the text logo at the top of the left corner*/
-.spanlogo {
-  font-family: "Nunito", sans-serif;
-  font-weight: bold;
-  color: #ec4067;
-  font-size: xx-large;
-}
-
-.search-btn {
-  margin-left: auto;
-}
-
-.input {
-  text-align: center;
-  transition: all 0.3s ease;
-  background-color: #ced4da;
-  padding: 8px;
-  border-radius: 7px;
-}
-
-.input:hover {
-  color: #ec4067;
-  cursor: pointer;
-}
-
-/*.buttons{
-      width: 90px;
-      height: 30px;
-      margin-top: 25px;
-      margin-left: 50px;
-      border-radius: 11px;
-      background-color: white;
-      border:2px solid #EC4067;
-      cursor: pointer;
-  }*/
-
-.genres {
-  padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.buttons {
-  background-color: #ec4067;
-  color: white;
-  width: 110px;
-  height: 32px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.buttons:hover {
-  background-color: white;
-  color: #ec4067;
-  border: 1px solid #ec4067;
-  cursor: pointer;
-}
-/*.buttons:hover{
-      color: white;
-      background-color: #EC4067;
-      border:1px solid white;
-      box-shadow: 0 9px 9px 0 rgba(253, 245, 245, 0.411), 0 17px 50px 0 rgba(255, 247, 247, 0.411);
-  }*/
 
 #content {
   display: none;
@@ -178,55 +73,6 @@ section .imageContainer {
   
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
-  gap:1rem;
-  position: fixed;
-  top:0;
-  left:0;
-  padding:1rem 2rem;
-  height:100%;
-  background-color: #111;
-  transition: all 0.4s ease;
-  transform: translateX(-100%);
-  pointer-events: none;
-  visibility: hidden;
-}
-
-.content-display {
-  transform: unset;
-  pointer-events: auto;
-  visibility: visible;
-}
-
-.content-display iframe{
-  border-radius: 5px;
-  /* Makes the youtube videos responsive */
-  aspect-ratio: 16 / 9;
-  width: 100%;
-}
-
-#content-close {
-  cursor: pointer;
-  padding:0.3rem 0.6rem;
-  border: 1px solid rgb(245, 10, 174);
-  border-radius: 5px;
-  width: fit-content;
-  transition: all 0.3s ease;
-}
-
-#content-close:hover {
-  background-color:  rgb(245, 10, 174);
-}
-
-.trailers-container{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap:1rem;
-}
-
 .imageContainer {
   transition: 250ms all;
   width: 190px;
@@ -246,18 +92,4 @@ section .imageContainer {
   width: 100px;
   padding-top: 5px;
   padding-left: 100px;
-}
-.footer {
-  width: auto;
-  color: #adb5bd;
-  font-size: 14px;
-  text-align: center;
-  border-top: 1px solid #adb5bd;
-  margin-top: 2rem;
-  padding: 1rem;
-}
-
-.footer a {
-  text-decoration: none;
-  color: #ec4067;
 }
