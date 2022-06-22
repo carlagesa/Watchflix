@@ -197,6 +197,9 @@ section .imageContainer {
   height:100vh;
 }
 
+.content-display iframe{
+  border-radius: 5px;
+}
 
 
 .content div {
