@@ -28,6 +28,7 @@ function resetInput() {
 function handleGeneralError(error) {
   log("Error:", error.message);
   log(error.message || "Internal Server");
+  console.log(error)
 }
 
 function createIframe(video) {
@@ -78,6 +79,9 @@ function createSectionHeader(title) {
 
 function renderMovies(data) {
   const moviesBlock = generateMoviesBlock(data);
+
+  if(!moviesBlock) return;
+
   const header = createSectionHeader(this.title);
   moviesBlock.insertBefore(header, moviesBlock.firstChild);
   moviesContainer.appendChild(moviesBlock);
@@ -91,6 +95,9 @@ function renderSearchMovies(data) {
 
 function generateMoviesBlock(data) {
   const movies = data.results;
+
+  if(!movies) return;
+
   const section = document.createElement("section");
   section.setAttribute("class", "section");
 
