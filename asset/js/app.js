@@ -28,6 +28,7 @@ function resetInput() {
 function handleGeneralError(error) {
   log("Error:", error.message);
   log(error.message || "Internal Server");
+  console.log(error)
 }
 
 function createIframe(video) {
@@ -42,6 +43,7 @@ function createIframe(video) {
 
 function insertIframeIntoContent(video, content) {
   const videoContent = document.createElement("div");
+  videoContent.classList.add('movie-video')
   const iframe = createIframe(video);
 
   videoContent.appendChild(iframe);
@@ -50,13 +52,21 @@ function insertIframeIntoContent(video, content) {
 
 function createVideoTemplate(data) {
   const content = this.content;
-  content.innerHTML = '<p id="content-close">X</p>';
+  content.innerHTML = '<p id="content-close">Close</p>';
+
+  // Wrapper for the video trailers
+  const trailersContainer = document.createElement('div')
+  trailersContainer.classList.add('trailers-container')
+
+  content.appendChild(trailersContainer)
 
   const videos = data.results || [];
 
+  console.log(this.content)
+
   if (videos.length === 0) {
     content.innerHTML = `
-            <p id="content-close">X</p>
+            <p id="content-close">Back</p>
             <p>No Trailer found for this video id of ${data.id}</p>
         `;
     return;
@@ -64,7 +74,7 @@ function createVideoTemplate(data) {
 
   for (let i = 0; i < 4; i++) {
     const video = videos[i];
-    insertIframeIntoContent(video, content);
+    insertIframeIntoContent(video, trailersContainer);
   }
 }
 
@@ -78,6 +88,9 @@ function createSectionHeader(title) {
 
 function renderMovies(data) {
   const moviesBlock = generateMoviesBlock(data);
+
+  if(!moviesBlock) return;
+
   const header = createSectionHeader(this.title);
   moviesBlock.insertBefore(header, moviesBlock.firstChild);
   moviesContainer.appendChild(moviesBlock);
@@ -91,6 +104,9 @@ function renderSearchMovies(data) {
 
 function generateMoviesBlock(data) {
   const movies = data.results;
+
+  if(!movies) return;
+
   const section = document.createElement("section");
   section.setAttribute("class", "section");
 
@@ -115,10 +131,10 @@ function createMovieContainer(section) {
   movieElement.setAttribute("class", "movie");
 
   const template = `
-        <div class="content">
-            <p id="content-close">X</p>
+<div class="content">
+            <p id="content-close">Close</p>
         </div>
-    `;
+        `;
 
   movieElement.innerHTML = template;
   movieElement.insertBefore(section, movieElement.firstChild);
@@ -141,9 +157,22 @@ document.onclick = function (event) {
   log("Event: ", event);
   const { tagName, id } = event.target;
   if (tagName.toLowerCase() === "img") {
+
     const movieId = event.target.dataset.movieId;
     const section = event.target.parentElement.parentElement;
     const content = section.nextElementSibling;
+
+    // Selects every content in the DOM.
+    const contents = document.querySelectorAll('.content')
+
+    // Loops through all content containers and hide it 
+    // so only one content would show every time user clicks a movie card.
+    contents.forEach((element) => {
+      if(element === content) return;
+      element.innerHTML = "";
+      element.classList.remove('content-display')
+    })
+
     content.classList.add("content-display");
     getVideosByMovieId(movieId, content);
   }
